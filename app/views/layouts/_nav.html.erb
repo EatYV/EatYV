@@ -1,0 +1,5 @@
+<% if chef_signed_in? %>
+    <%= render '/layouts/nav_chef' %>
+<% else %>
+    <%= render '/layouts/nav_guest' %>
+<% end %>
