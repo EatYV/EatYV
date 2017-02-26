@@ -1,8 +1,15 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Title:</strong>
   <%= @cuisine.title %>
+  <br>
+  <%= @cuisine.about %>
+  <br>
+  <%= @cuisine.availability %>
+  <br>
+  <%= @cuisine.location %>
+  <br>
+  <%= @cuisine.average_price %>
 </p>
 
 <%= link_to 'Edit', edit_cuisine_path(@cuisine) %> |
