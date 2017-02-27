@@ -12,5 +12,13 @@
   <%= @cuisine.average_price %>
 </p>
 
-<%= link_to 'Edit', edit_cuisine_path(@cuisine) %> |
-<%= link_to 'Back', cuisines_path %>
+<% if current_chef.id == @cuisine.chef_id %>
+  <%= link_to 'Edit', edit_cuisine_path(@cuisine) %> |
+  <%= link_to 'Destroy', @cuisine, method: :delete, data: { confirm: 'Are you sure?' } %> |
+  <%= link_to 'Back', cuisines_path %>
+<% end %>
+
+<br>
+<br>
+
+<h1>Recipes</h1>

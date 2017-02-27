@@ -13,10 +13,6 @@
     <% @cuisines.each do |cuisine| %>
       <tr>
         <td><%= link_to cuisine.title, cuisine %></td>
-        <% if current_chef.id == @cuisine.chef_id %>
-          <td><%= link_to 'Edit', edit_cuisine_path(cuisine) %></td>
-          <td><%= link_to 'Destroy', cuisine, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        <% end %>
       </tr>
     <% end %>
   </tbody>
