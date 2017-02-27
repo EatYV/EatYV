@@ -1,4 +1,4 @@
-<% if chef_signed_in? %>
+<% if current_chef.id == @cuisine.chef_id %>
   <h1>Editing Cuisine</h1>
 
   <%= render 'form', cuisine: @cuisine %>
