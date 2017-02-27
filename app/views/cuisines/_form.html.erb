@@ -1,42 +1,44 @@
-<%= form_for(cuisine) do |f| %>
-  <% if cuisine.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(cuisine.errors.count, "error") %> prohibited this cuisine from being saved:</h2>
+<% if chef_signed_in? %>
+  <%= form_for(cuisine) do |f| %>
+    <% if cuisine.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(cuisine.errors.count, "error") %> prohibited this cuisine from being saved:</h2>
 
-      <ul>
-      <% cuisine.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+        <ul>
+        <% cuisine.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="field">
+      <%= f.label :title %>
+      <%= f.text_field :title %>
+    </div>
+
+    <div class="field">
+      <%= f.label :about %>
+      <%= f.text_area :about %>
+    </div>
+
+    <div class="field">
+      <%= f.label :availability %>
+      <%= f.text_field :availability %>
+    </div>
+
+    <div class="field">
+      <%= f.label :location %>
+      <%= f.text_field :location %>
+    </div>
+
+    <div class="field">
+    <%= f.label :average_price %><br>
+    <%= f.number_field :average_price, step: 'any' %>
+  </div>
+
+    <div class="actions">
+      <%= f.submit %>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= f.label :title %>
-    <%= f.text_field :title %>
-  </div>
-
-  <div class="field">
-    <%= f.label :about %>
-    <%= f.text_area :about %>
-  </div>
-
-  <div class="field">
-    <%= f.label :availability %>
-    <%= f.text_field :availability %>
-  </div>
-
-  <div class="field">
-    <%= f.label :location %>
-    <%= f.text_field :location %>
-  </div>
-
-  <div class="field">
-  <%= f.label :average_price %><br>
-  <%= f.number_field :average_price, step: 'any' %>
-</div>
-
-  <div class="actions">
-    <%= f.submit %>
-  </div>
 <% end %>
