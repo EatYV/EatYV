@@ -10,6 +10,7 @@ class CuisinesController < ApplicationController
   # GET /cuisines/1
   # GET /cuisines/1.json
   def show
+    @recipes = Recipe.where(cuisine_id: @cuisine).order('created_at DESC')
   end
 
   # GET /cuisines/new
@@ -69,6 +70,6 @@ class CuisinesController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def cuisine_params
-    params.require(:cuisine).permit(:title, :about, :availability, :location, :average_price)
+    params.require(:cuisine).permit(:title, :about, :availability, :location)
   end
 end

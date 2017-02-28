@@ -1,18 +1,21 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+  <h2>Title</h2>
   <%= @cuisine.title %>
   <br>
+  <h2>About</h2>
   <%= @cuisine.about %>
   <br>
+  <h2>Availability</h2>
   <%= @cuisine.availability %>
   <br>
+  <h2>Location</h2>
   <%= @cuisine.location %>
   <br>
-  <%= @cuisine.average_price %>
 </p>
 
-<% if current_chef.id == @cuisine.chef_id %>
+<% if current_chef == @cuisine.chef %>
   <%= link_to 'Edit', edit_cuisine_path(@cuisine) %> |
   <%= link_to 'Destroy', @cuisine, method: :delete, data: { confirm: 'Are you sure?' } %> |
   <%= link_to 'Back', cuisines_path %>
@@ -21,4 +24,5 @@
 <br>
 <br>
 
-<h1>Recipes</h1>
+<h1>Menu</h1>
+<%= render 'recipes/recipe' %>
