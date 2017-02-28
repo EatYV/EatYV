@@ -4,6 +4,10 @@
   <h2>Price</h2>
   <p><%= recipe.price %></p>
   <br>
+  <% if current_chef == @cuisine.chef %>
+    <%= link_to "Delete Recipe", [recipe.cuisine, recipe], method: :delete  %>
+    <%= link_to "Edit Recipe", edit_cuisine_recipe_path(recipe.cuisine, recipe) %>
+  <% end %>
 <% end %>
 
 <%= render 'recipes/form' %>
