@@ -1,5 +1,7 @@
 <% if chef_signed_in? %>
     <%= render '/layouts/nav_chef' %>
+<% elsif user_signed_in? %>
+    <%= render '/layouts/nav_user' %>
 <% else %>
     <%= render '/layouts/nav_guest' %>
 <% end %>
