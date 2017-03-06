@@ -4,7 +4,8 @@
     <p>
       Create your own Cuisine or eat Your Vegetables!
     </p>
-    <%= link_to 'Get Started', authentication_index_path, class: 'btn btn-warning btn-lg' %>
+    <% if !user_signed_in? and !chef_signed_in? %>
+      <%= link_to 'Get Started', authentication_index_path, class: 'btn btn-warning btn-lg' %>
+    <% end %>
   </div>
 </div>
-

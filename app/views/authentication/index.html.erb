@@ -1,4 +1,6 @@
-<%= link_to 'Become a Chef', new_chef_registration_path %><br>
-<%= link_to 'Log In As a Chef', new_chef_session_path %><br>
-<%= link_to 'Become a User and start to eat', new_user_registration_path %><br>
-<%= link_to 'Log In As a User', new_user_session_path %><br>
+<% if !user_signed_in? and !chef_signed_in? %>
+  <%= link_to 'Become a Chef', new_chef_registration_path %><br>
+  <%= link_to 'Log In As a Chef', new_chef_session_path %><br>
+  <%= link_to 'Become a User and start to eat', new_user_registration_path %><br>
+  <%= link_to 'Log In As a User', new_user_session_path %><br>
+<% end %>
