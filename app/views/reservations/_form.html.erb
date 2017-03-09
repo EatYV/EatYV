@@ -1,0 +1,5 @@
+<%= form_for([@cuisine, @cuisine.reservations.build]) do |f| %>
+  <%= f.text_area :message %>
+  <br>
+  <%= f.submit %>
+<% end %>

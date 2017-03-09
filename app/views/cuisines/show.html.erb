@@ -24,5 +24,13 @@
 <br>
 <br>
 
+
 <h1>Menu</h1>
 <%= render 'recipes/recipe' %>
+
+<br>
+<br>
+<% if user_signed_in? %>
+  <h2>Reservation</h2>
+  <%= render 'reservations/form' %>
+<% end %>

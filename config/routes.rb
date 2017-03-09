@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   devise_for :chefs
   resources :cuisines do
     resources :recipes
+    resources :reservations
   end
 
   resources :authentication
