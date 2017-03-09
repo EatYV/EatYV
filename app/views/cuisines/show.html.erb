@@ -1,25 +1,19 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <h2>Title</h2>
-  <%= @cuisine.title %>
-  <br>
-  <h2>About</h2>
-  <%= @cuisine.about %>
-  <br>
-  <h2>Availability</h2>
-  <%= @cuisine.availability %>
-  <br>
-  <h2>Location</h2>
-  <%= @cuisine.location %>
-  <br>
-</p>
+<div class="cuisine_chefs">
+  <ul class="navbar-nav mr-0 ml-lg-auto">
+    <li>Title: <%= @cuisine.title %> </li>
+    <li>About: <%= @cuisine.about %></li>
+    <li>Availability: <%= @cuisine.availability %></li>
+    <li>Location: <%= @cuisine.location %></li>
+    <li><% if current_chef == @cuisine.chef %>
+    <%= link_to 'Edit', edit_cuisine_path(@cuisine) %> |
+    <%= link_to 'Delete', @cuisine, method: :delete, data: { confirm: 'Are you sure?' } %> |
+    <%= link_to 'Back', cuisines_path %>
+    <% end %></li>
+  </ul>
+</div>
 
-<% if current_chef == @cuisine.chef %>
-  <%= link_to 'Edit', edit_cuisine_path(@cuisine) %> |
-  <%= link_to 'Destroy', @cuisine, method: :delete, data: { confirm: 'Are you sure?' } %> |
-  <%= link_to 'Back', cuisines_path %>
-<% end %>
 
 <br>
 <br>
