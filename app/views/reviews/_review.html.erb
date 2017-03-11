@@ -4,10 +4,7 @@
   <h2></h2>
   <p><%= review.comments %></p>
   <br>
-  <% if current_user == @cuisine.user %>
-    <%= link_to "Delete Review", [review.cuisine, review], method: :delete  %>
-    <%= link_to "Edit Review", edit_cuisine_review_path(review.cuisine, review) %>
-  <% end %>
+
 <% end %>
 
 <%= render 'reviews/form' %>

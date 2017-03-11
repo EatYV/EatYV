@@ -13,19 +13,17 @@
 </div>
 
 
-<br>
-<br>
+<br><br>
 
 
 <h1>Menu</h1>
-<%= render 'recipes/recipe' %>
+  <%= render 'recipes/recipe' %>
+    <br><br>
 
-<br>
-<br>
-<% if user_signed_in? or current_chef == @cuisine.chef %>
-  <h2>Reservations</h2>
-  <%= render 'reservations/reservation' %>
-<% end %>
+    <% if user_signed_in? or current_chef == @cuisine.chef %>
+      <h2>Reservations</h2>
+      <%= render 'reservations/reservation' %>
+    <% end %>
 
 <h2>Review:</h2>
-<%= render 'reviews/review' %>
+  <%= render 'reviews/review' %>
