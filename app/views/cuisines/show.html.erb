@@ -7,7 +7,7 @@
     <li><% if current_chef == @cuisine.chef %>
     <%= link_to 'Edit', edit_cuisine_path(@cuisine) %> |
     <%= link_to 'Delete', @cuisine, method: :delete, data: { confirm: 'Are you sure?' } %> |
-    <%= link_to 'Back', cuisines_path %>
+    <%= link_to '&#x276e;'.html_safe, cuisines_path, class: 'btn btn-secondary btn-circle' %>
     <% end %></li>
   </ul>
 </div>
