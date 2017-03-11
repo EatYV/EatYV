@@ -1,12 +1,11 @@
 <% @recipes.each do |recipe| %>
-  <h2>Title</h2>
-  <p><%= recipe.title %></p>
-  <h2>Price</h2>
-  <p><%= recipe.price %></p>
-  <br>
+  <h5><div> <%= recipe.title %> </div></h5>
+  <h5><b>Price:</b> <%= recipe.price %> </h5>
   <% if current_chef == @cuisine.chef %>
+     <%= link_to "Edit Recipe", edit_cuisine_recipe_path(recipe.cuisine, recipe) %> |
     <%= link_to "Delete Recipe", [recipe.cuisine, recipe], method: :delete  %>
-    <%= link_to "Edit Recipe", edit_cuisine_recipe_path(recipe.cuisine, recipe) %>
+    <br>
+    <br>
   <% end %>
 <% end %>
 
