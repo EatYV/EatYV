@@ -2,11 +2,15 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.cuisine_chefs{
-	list-style-type: none;
-	font-size: 20px;
- 	font-weight: lighter;
-  color:blue;
-  margin-bottom: 20px;
-  margin: 15px;
+
+
+
+.btn-circle {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  padding: 6px 0;
+  font-size: 12px;
+  line-height: 1.428571429;
+  border-radius: 15px;
 }

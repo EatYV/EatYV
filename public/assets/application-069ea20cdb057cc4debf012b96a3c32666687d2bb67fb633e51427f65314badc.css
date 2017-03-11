@@ -3450,6 +3450,17 @@ fieldset[disabled] a.btn {
   background-color: transparent;
   border-color: #ccc;
 }
+
+.btn-circle {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  padding: 6px 0;
+  font-size: 12px;
+  line-height: 1.428571429;
+  border-radius: 15px;
+}
+
 /* line 11, /home/s/.rvm/gems/ruby-2.4.0/gems/bootstrap-4.0.0.alpha6/assets/stylesheets/bootstrap/mixins/_hover.scss */
 .btn-outline-secondary:hover {
   color: #fff;
@@ -3537,6 +3548,15 @@ fieldset[disabled] a.btn {
   background-color: transparent;
   border-color: #f0ad4e;
 }
+
+.btn-back-circle {
+  color: #ffffff;
+  border-radius: 50%;
+  background-image: none;
+  background-color: transparent;
+  border-color: #ffffff;
+}
+
 /* line 11, /home/s/.rvm/gems/ruby-2.4.0/gems/bootstrap-4.0.0.alpha6/assets/stylesheets/bootstrap/mixins/_hover.scss */
 .btn-outline-warning:hover {
   color: #fff;
