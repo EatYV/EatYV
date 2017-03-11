@@ -1,5 +1,11 @@
 <% if current_chef == @cuisine.chef %>
   <%= form_for([@cuisine, @cuisine.recipes.build]) do |f| %>
+
+   <div class="field">
+      <%= f.file_field :image %>
+    </div>
+    <br>
+
     <div class="field">
       <%= f.label :title %>
       <%= f.text_field :title %>
@@ -9,14 +15,10 @@
       <%= f.label :price %>
       <%= f.number_field :price, class: :text_field, step: :any %>
     </div>
-
-    <div class="field">
-      <%= f.label :image %>
-      <%= f.file_field :image %>
-    </div>
+    <br>
 
     <div class="actions">
-      <%= f.submit 'Add Recipe' %>
+      <%= f.submit 'Add Recipe', class: 'btn btn-warning' %>
     </div>
   <% end %>
 <% end %>

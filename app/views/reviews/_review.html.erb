@@ -1,8 +1,8 @@
 <% @reviews.each do |review| %>
-  <h2>Grade</h2>
-  <p><%= review.grades %></p>
-  <h2></h2>
-  <p><%= review.comments %></p>
+<h5>Review:</h5>
+  <%= review.grades %> |
+  <%= review.comments %>
+  <br>
   <br>
 
 <% end %>

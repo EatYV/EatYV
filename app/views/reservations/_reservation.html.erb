@@ -1,10 +1,12 @@
 <% if current_chef == @cuisine.chef %>
   <% @reservations.each do |reservation| %>
+  <div class='reserv-box'>
     <p><%= reservation.name %></p>
-    <br>
     <p><%= reservation.time %></p>
-    <br>
     <p><%= reservation.message %></p>
+  </div>
+    <br>
+    <br>
   <% end %>
 <% end %>
 
