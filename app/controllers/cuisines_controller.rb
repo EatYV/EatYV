@@ -3,7 +3,6 @@ class CuisinesController < ApplicationController
 
   def index
     @cuisines = Cuisine.where(["title LIKE ?","%#{params[:search]}%"])
-
   end
   # GET /cuisines
   # GET /cuisines.json
