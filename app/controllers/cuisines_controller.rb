@@ -3,7 +3,7 @@ class CuisinesController < ApplicationController
 
   def index
     @cuisines = Cuisine.all
-    @cuisines = Cuisine.search[ params:search]
+   # @cuisines = Cuisine.search([params:search])
   end
   # GET /cuisines
   # GET /cuisines.json
