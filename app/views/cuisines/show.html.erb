@@ -1,15 +1,15 @@
 <div class="cuisine_chefs">
-  <ul class="navbar-nav mr-0 ml-lg-auto">
-    <li>Title: <%= @cuisine.title %> </li>
-    <li>About: <%= @cuisine.about %></li>
-    <li>Availability: <%= @cuisine.availability %></li>
-    <li>Location: <%= @cuisine.location %></li>
+   <br> <%= link_to '&#x276e;'.html_safe, cuisines_path, class: 'btn btn-secondary btn-circle' %> <br><br>
+  <div class="navbar-nav mr-0 ml-lg-auto">
+    <h1> <%= @cuisine.title %> </h1>
+    About: <%= @cuisine.about %><br>
+    Availability: <%= @cuisine.availability %><br>
+    Location: <%= @cuisine.location %><br>
     <li><% if current_chef == @cuisine.chef %>
     <%= link_to 'Edit', edit_cuisine_path(@cuisine) %> |
-    <%= link_to 'Delete', @cuisine, method: :delete, data: { confirm: 'Are you sure?' } %> |
-    <%= link_to '&#x276e;'.html_safe, cuisines_path, class: 'btn btn-secondary btn-circle' %>
+    <%= link_to 'Delete', @cuisine, method: :delete, data: { confirm: 'Are you sure?' } %>
     <% end %></li>
-  </ul>
+  </div>
 </div>
 
 
