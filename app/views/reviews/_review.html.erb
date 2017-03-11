@@ -1,8 +1,8 @@
-<% @recipes.each do |recipe| %>
+<% @reviews.each do |review| %>
   <h2>Grade</h2>
-  <p><%= @review.grades %></p>
+  <p><%= review.grades %></p>
   <h2></h2>
-  <p><%= @review.comments %></p>
+  <p><%= review.comments %></p>
   <br>
   <% if current_user == @cuisine.user %>
     <%= link_to "Delete Review", [review.cuisine, review], method: :delete  %>
