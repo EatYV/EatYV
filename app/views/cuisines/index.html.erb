@@ -11,7 +11,7 @@
       <tbody>
         <% @cuisines.each do |cuisine| %>
           <tr>
-            <td><%= link_to cuisine.title, cuisine, class: 'btn btn-success' %></td>
+            <td><%= link_to cuisine.title, cuisine, class: 'btn btn-secondary' %></td>
           </tr>
         <% end %>
       </tbody>
@@ -19,7 +19,7 @@
 
     <br>
     <% if chef_signed_in? %>
-      <%= link_to 'New Cuisine', new_cuisine_path, class: 'btn btn-primary btn-sm' %>
+      <%= link_to 'New Cuisine', new_cuisine_path, class: 'btn btn-warning' %>
     <% end %>
   </div>
 </div>
