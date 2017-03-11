@@ -21,7 +21,7 @@
     <br><br>
 
     <% if user_signed_in? or current_chef == @cuisine.chef %>
-      <h2>Reservations</h2>
+      <h2>Reservations:</h2>
       <%= render 'reservations/reservation' %>
     <% end %>
 

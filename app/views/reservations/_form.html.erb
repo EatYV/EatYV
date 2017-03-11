@@ -1,21 +1,25 @@
+<div class="col-md-6 col-md-offset-5 text-center">
  <% if user_signed_in? %>
   <%= form_for([@cuisine, @cuisine.reservations.build]) do |f| %>
     <div class="field">
-      <%= f.label :name %>
-      <%= f.text_field :name %>
+      <!-- <%= f.label :name %> -->
+      <%= f.text_field :name, placeholder: :name, class: 'form-control' %>
     </div>
     <br>
     <div class="field">
-      <%= f.label :time %>
-      <%= f.text_field :time %>
+      <!-- <%= f.label :time %> -->
+      <%= f.text_field :time, placeholder: :time, class: 'form-control'  %>
     </div>
   <br>
     <div class="field">
-      <%= f.label :message %>
-      <%= f.text_area :message %>
+      <!-- <%= f.label :message %> -->
+      <%= f.text_area :message, placeholder: :message, class: 'form-control', size: '30x6' %>
     </div>
+    <br>
+  <%= f.submit class: 'btn btn-warning'%>
   <br>
-  <%= f.submit %>
+  <br>
 
   <% end %>
 <% end %>
+</div>
