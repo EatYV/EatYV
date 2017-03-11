@@ -1,7 +1,9 @@
+<br>
+<%= link_to '&#x276e;'.html_safe, cuisines_path, class: 'btn btn-secondary btn-circle' %>
+<br>
+<br>
 <% if chef_signed_in? %>
 	<h1>New Cuisine</h1>
 
   		<%= render 'form', cuisine: @cuisine, class: 'btn btn-primary'%>
-
-		<%= link_to 'Back', cuisines_path %>
 <% end %>
