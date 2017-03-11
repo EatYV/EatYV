@@ -77,4 +77,4 @@ class CuisinesController < ApplicationController
   end
 end
 
-  
+
