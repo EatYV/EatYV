@@ -1,11 +1,12 @@
 class CuisinesController < ApplicationController
   before_action :set_cuisine, only: [:show, :edit, :update, :destroy]
 
-  # GET /cuisines
-  # GET /cuisines.json
   def index
     @cuisines = Cuisine.all
+    @cuisines = Cuisine.search[ params:search]
   end
+  # GET /cuisines
+  # GET /cuisines.json
 
   # GET /cuisines/1
   # GET /cuisines/1.json
@@ -75,3 +76,5 @@ class CuisinesController < ApplicationController
     params.require(:cuisine).permit(:title, :about, :availability, :location)
   end
 end
+
+  

@@ -10,6 +10,13 @@
       <li class="nav-item"><%= link_to 'Cuisine', cuisines_path, class: 'nav-link' %></li>
     </ul>
 
+    <%= form_tag cuisines_path, :method => 'get' do %>
+      <p>
+        <%= text_field_tag :search, nil, :placeholder => "Search items here" %>
+        <%= submit_tag "Search", :name => nil %>
+      </p>
+    <% end %>
+
     <ul class="navbar-nav mr-0 ml-lg-auto">
       <li class="nav-item"><%= link_to 'Settings', edit_user_registration_path, class: 'nav-link' %></li>
       <li class="nav-item"><%= link_to 'Sign Out', destroy_user_session_path, :method => :get, class: 'nav-link' %></li>
