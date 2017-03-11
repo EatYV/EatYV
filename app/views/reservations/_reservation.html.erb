@@ -1,9 +1,11 @@
-<% @reservations.each do |reservation| %>
-  <p><%= reservation.name %></p>
-  <br>
-  <p><%= reservation.time %></p>
-  <br>
-  <p><%= reservation.message %></p>
+<% if current_chef == @cuisine.chef %>
+  <% @reservations.each do |reservation| %>
+    <p><%= reservation.name %></p>
+    <br>
+    <p><%= reservation.time %></p>
+    <br>
+    <p><%= reservation.message %></p>
+  <% end %>
 <% end %>
 
 <%= render 'reservations/form' %>
