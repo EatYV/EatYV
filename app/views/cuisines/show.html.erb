@@ -1,35 +1,29 @@
-<div class="cuisine_background">
-  <div class="cuisine_background-content">
-    <div class="cuisine_chefs">
-      <ul class="navbar-nav mr-0 ml-lg-auto">
-        <li>Title: <%= @cuisine.title %> </li>
-        <li>About: <%= @cuisine.about %></li>
-        <li>Availability: <%= @cuisine.availability %></li>
-        <li>Location: <%= @cuisine.location %></li>
-        <li><% if current_chef == @cuisine.chef %>
-        <%= link_to 'Edit', edit_cuisine_path(@cuisine) %> |
-        <%= link_to 'Delete', @cuisine, method: :delete, data: { confirm: 'Are you sure?' } %> |
-        <%= link_to 'Back', cuisines_path %>
-        <% end %></li>
-      </ul>
-    </div>
+<div class="cuisine_chefs">
+  <ul class="navbar-nav mr-0 ml-lg-auto">
+    <li>Title: <%= @cuisine.title %> </li>
+    <li>About: <%= @cuisine.about %></li>
+    <li>Availability: <%= @cuisine.availability %></li>
+    <li>Location: <%= @cuisine.location %></li>
+    <li><% if current_chef == @cuisine.chef %>
+    <%= link_to 'Edit', edit_cuisine_path(@cuisine) %> |
+    <%= link_to 'Delete', @cuisine, method: :delete, data: { confirm: 'Are you sure?' } %> |
+    <%= link_to 'Back', cuisines_path %>
+    <% end %></li>
+  </ul>
+</div>
 
 
-    <br>
-    <br>
+<br><br>
 
 
-    <h1>Menu</h1>
-    <%= render 'recipes/recipe' %>
+<h1>Menu</h1>
+  <%= render 'recipes/recipe' %>
+    <br><br>
 
-    <br>
-    <br>
     <% if user_signed_in? or current_chef == @cuisine.chef %>
       <h2>Reservations</h2>
       <%= render 'reservations/reservation' %>
     <% end %>
 
-    <h2>Review:</h2>
-    <%= render 'reviews/review' %>
-  </div>
-</div>
+<h2>Review:</h2>
+  <%= render 'reviews/review' %>

@@ -1,11 +1,7 @@
-<div class="cuisine_background">
-	<div class="cuisine_background-content">
-		<% if chef_signed_in? %>
-	  		<h1>New Cuisine</h1>
+<% if chef_signed_in? %>
+	<h1>New Cuisine</h1>
 
-	  			<%= render 'form', cuisine: @cuisine %>
+  		<%= render 'form', cuisine: @cuisine %>
 
-			  <%= link_to 'Back', cuisines_path %>
-		<% end %>
-	</div>
-</div>
+		<%= link_to 'Back', cuisines_path %>
+<% end %>
