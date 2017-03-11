@@ -32,3 +32,7 @@ LOG:  database system is ready to accept connections
 LOG:  autovacuum launcher started
 FATAL:  lock file "postmaster.pid" already exists
 HINT:  Is another postmaster (PID 929) running in data directory "/usr/local/var/postgres"?
+ERROR:  database "eatyv_development" already exists
+STATEMENT:  CREATE DATABASE "eatyv_development" ENCODING = 'unicode'
+ERROR:  database "eatyv_test" already exists
+STATEMENT:  CREATE DATABASE "eatyv_test" ENCODING = 'unicode'
