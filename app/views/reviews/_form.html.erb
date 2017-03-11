@@ -1,0 +1,17 @@
+<% if user_signed_in? %>
+  <%= form_for([@cuisine, @cuisine.reviews.build]) do |f| %>
+    <div class="field">
+      <%= f.label :grades %>
+      <%= f.number_field :grades %>
+    </div>
+
+    <div class="field">
+      <%= f.label :comments %>
+      <%= f.text_field :comments, class: :text_field, step: :any %>
+    </div>
+
+    <div class="actions">
+      <%= f.submit 'Add Review' %>
+    </div>
+  <% end %>
+<% end %>
