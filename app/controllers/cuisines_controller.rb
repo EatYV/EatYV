@@ -12,6 +12,7 @@ class CuisinesController < ApplicationController
   def show
     @recipes = Recipe.where(cuisine_id: @cuisine).order('created_at DESC')
     @reservations = Reservation.where(cuisine_id: @cuisine).order('created_at DESC')
+    @reviews = Review.where(cuisine_id: @cuisine).order('created_at DESC')
   end
 
   # GET /cuisines/new

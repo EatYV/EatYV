@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :cuisines do
     resources :recipes
     resources :reservations
+    resources :reviews
   end
 
   resources :authentication
