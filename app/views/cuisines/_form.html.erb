@@ -1,39 +1,43 @@
-<% if chef_signed_in? %>
-  <%= form_for(cuisine) do |f| %>
-    <% if cuisine.errors.any? %>
-      <div id="error_explanation">
-        <h2><%= pluralize(cuisine.errors.count, "error") %> prohibited this cuisine from being saved:</h2>
+<div class="row"></div>
+  <div class="col-md-8 col-md-offset-2 text-center">
+    <% if chef_signed_in? %>
+      <%= form_for(cuisine) do |f| %>
+        <% if cuisine.errors.any? %>
+          <div id="error_explanation">
+            <h2><%= pluralize(cuisine.errors.count, "error") %> prohibited this cuisine from being saved:</h2>
 
-        <ul>
-        <% cuisine.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
+            <ul>
+            <% cuisine.errors.full_messages.each do |message| %>
+              <li><%= message %></li>
+            <% end %>
+            </ul>
+          </div>
         <% end %>
-        </ul>
-      </div>
+
+        <div class="field">
+          <%= f.label :title %>
+          <%= f.text_field :title, class: 'form-control' %>
+        </div>
+
+        <div class="field">
+          <%= f.label :about %>
+          <%= f.text_area :about, class: 'form-control', size: '20x8' %>
+        </div>
+
+        <div class="field">
+          <%= f.label :availability %>
+          <%= f.text_field :availability, class: 'form-control' %>
+        </div>
+
+        <div class="field">
+          <%= f.label :location %>
+          <%= f.text_field :location, class: 'form-control' %>
+        </div>
+
+        <div class="actions">
+          <%= f.submit %>
+        </div>
+      <% end %>
     <% end %>
-
-    <div class="field">
-      <%= f.label :title %>
-      <%= f.text_field :title %>
-    </div>
-
-    <div class="field">
-      <%= f.label :about %>
-      <%= f.text_area :about %>
-    </div>
-
-    <div class="field">
-      <%= f.label :availability %>
-      <%= f.text_field :availability %>
-    </div>
-
-    <div class="field">
-      <%= f.label :location %>
-      <%= f.text_field :location %>
-    </div>
-
-    <div class="actions">
-      <%= f.submit %>
-    </div>
-  <% end %>
-<% end %>
+  </div>
+</div>
