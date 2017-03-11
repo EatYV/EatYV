@@ -10,12 +10,15 @@
       <li class="nav-item"><%= link_to 'Cuisine', cuisines_path, class: 'nav-link' %></li>
     </ul>
 
-    <%= form_tag cuisines_path, :method => 'get' do %>
+<ul class="nav navbar-nav navbar-logo mx-auto">
+     <li class="nav-item"> <%= form_tag cuisines_path, :method => 'get' do %>
       <%= text_field_tag :search, nil, placeholder: "Search cuisines here" %>
-      <%= submit_tag "Search", class: 'btn btn-outline-secondary'  %>
+      <%= submit_tag "Search", class: 'btn btn-outline-secondary' %>
     <% end %>
+    </li>
+</ul>
 
-    <ul class="navbar-nav mr-0 ml-lg-auto">
+    <ul class="nav navbar-nav pull-right">
       <li class="nav-item"><%= link_to 'Settings', edit_user_registration_path, class: 'nav-link' %></li>
       <li class="nav-item"><%= link_to 'Sign Out', destroy_user_session_path, :method => :get, class: 'nav-link' %></li>
     </ul>
