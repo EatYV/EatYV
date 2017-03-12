@@ -11,9 +11,9 @@
     </ul>
 
 <ul class="nav navbar-nav navbar-logo mx-auto">
-    <li class="nav-item"> <%= form_tag cuisines_path, :method => 'get' do %>
-      <%= text_field_tag :search, nil, placeholder: "Search cuisines here" %>
-      <%= submit_tag "Search", class: 'btn btn-outline-secondary' %>
+     <li class="nav-item"> <%= form_tag cuisines_path, :method => 'get' do %>
+      <%= text_field_tag :search, nil, placeholder: "Search cuisines here", class: 'search-round-bar'%>
+      <%= submit_tag "&#x1f374;".html_safe, class: 'btn btn-outline-secondary btn-sm' %>
     <% end %>
     </li>
 </ul>

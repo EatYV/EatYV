@@ -1,5 +1,9 @@
+<br>
+<%= link_to '&#x276e;'.html_safe, :back, class: 'btn btn-secondary btn-circle' %> <br>
+
 <% if current_chef == @cuisine.chef %>
   <%= form_for([@cuisine, @recipe]) do |f| %>
+  <br>
     <div class="field">
       <%= f.label :title %>
       <%= f.text_field :title %>
@@ -9,9 +13,10 @@
       <%= f.label :price %>
       <%= f.number_field :price, class: :text_field, step: :any %>
     </div>
+    <br>
 
     <div class="actions">
-      <%= f.submit 'Add Recipe' %>
+      <%= f.submit 'Add Recipe', class: 'btn btn-warning' %>
     </div>
   <% end %>
 <% end %>

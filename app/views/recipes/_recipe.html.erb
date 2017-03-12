@@ -1,8 +1,8 @@
 <% @recipes.each do |recipe| %>
+<br>
   <h5><div> <%= recipe.title %> </div></h5>
-  <h5><b>Price:</b> <%= recipe.price %> </h5>
+  <h6><b>Price:</b> <%= recipe.price %> </h6>
   <%= image_tag recipe.image_url(:thumb).to_s %>
-  <br>
   <% if current_chef == @cuisine.chef %>
      <%= link_to "Edit Recipe", edit_cuisine_recipe_path(recipe.cuisine, recipe) %> |
     <%= link_to "Delete Recipe", [recipe.cuisine, recipe], method: :delete  %>

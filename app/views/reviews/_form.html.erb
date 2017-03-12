@@ -1,14 +1,15 @@
 <div class="col-md-4 col-md-offset-5 text-center">
 <% if user_signed_in? %>
   <%= form_for([@cuisine, @cuisine.reviews.build]) do |f| %>
+
     <div class="field">
-      <%= f.number_field :grades, placeholder: :grades, class: 'form-control'  %>
-    </div>
-    <br>
-    <div class="field">
-      <%= f.text_area :comments, class: :text_area, step: :any, placeholder: :comments, class: 'form-control'  %>
+      <%= f.text_area :comments, class: :text_area, step: :any, placeholder: :comments, class: 'form-control' %>
     </div>
 <br>
+    <div class="field">
+      <%= f.select :grades, [5, 4, 3, 2, 1], placeholder: :grades, class: 'form-control-lg'  %>
+    </div>
+    <br>
     <div class="actions">
       <%= f.submit 'Add Review', class: 'btn btn-warning' %>
     </div>
