@@ -2,7 +2,7 @@
 <% if user_signed_in? %>
   <%= form_for([@cuisine, @cuisine.reviews.build]) do |f| %>
     <div class="field">
-      <%= f.number_field :grades, placeholder: :grades, class: 'form-control'  %>
+      <%= f.select :grades, [1, 2, 3, 4, 5], placeholder: :grades, class: 'form-control custom-select'  %>
     </div>
     <br>
     <div class="field">
