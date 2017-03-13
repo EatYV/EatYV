@@ -2,7 +2,8 @@ class CuisinesController < ApplicationController
   before_action :set_cuisine, only: [:show, :edit, :update, :destroy]
 
   def index
-    @cuisines = Cuisine.where(["title LIKE ?","%#{params[:search]}%"])
+    #@cuisines = Cuisine.where(["title LIKE ?","%#{params[:search]}%"])
+    @cuisines = Cuisine.where('lower(title) LIKE lower(?) OR lower(title) LIKE lower(?)', "%#{params[:search]}%", "%#{params[:search]}%")
   end
   # GET /cuisines
   # GET /cuisines.json
