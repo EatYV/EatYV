@@ -21,4 +21,8 @@ class ReviewsController < ApplicationController
   def review_params
     params.require(:review).permit(:grades, :comments)
   end
+
+  if :grades == 5
+    return @review_result = 5
+  end
 end
