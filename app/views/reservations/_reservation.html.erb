@@ -1,4 +1,4 @@
-<% if current_chef == @cuisine.chef or current_user == @reservation.user %>
+<% if current_chef == @cuisine.chef %>
   <% @reservations.each do |reservation| %>
     <div class='reserv-box'>
       <b><p><%= reservation.name %></p></b>
