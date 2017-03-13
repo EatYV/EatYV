@@ -1,10 +1,6 @@
 <% @reviews.each do |review| %>
 <h5>Review:</h5>
-
-<% if @review_result == 5 %>
-  <p> &#9734; &#9734; &#9734; &#9734; &#9734;</p>
-<% end %>
-  <%= review.grades %> &#9734; |
+  <% review.grades.times { concat "&#9734;".html_safe} %> |
   <%= review.comments %>
   <br>
   <br>

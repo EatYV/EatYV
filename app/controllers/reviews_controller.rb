@@ -3,7 +3,7 @@ class ReviewsController < ApplicationController
 
   def create
     @review = @cuisine.reviews.new(review_params)
-    @review.user_id = current_user.id
+    @review.user = current_user
     @review.save
 
     if @review.save
@@ -20,9 +20,5 @@ class ReviewsController < ApplicationController
 
   def review_params
     params.require(:review).permit(:grades, :comments)
-  end
-
-  if :grades == 5
-    return @review_result = 5
   end
 end
