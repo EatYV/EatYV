@@ -1,5 +1,6 @@
 <% @reviews.each do |review| %>
 <h5>Review:</h5>
+
   <% review.grades.times { concat "&#9734;".html_safe} %> |
   <%= review.comments %>
   <br>
