@@ -3,7 +3,7 @@ class ReservationsController < ApplicationController
 
   def create
     @reservation = @cuisine.reservations.new(reservation_params)
-    @reservation.user = current_user
+    @reservation.user_id = current_user.id
     @reservation.save
 
     if @reservation.save
