@@ -1,8 +1,7 @@
 <% @reviews.each do |review| %>
-
+<br>
   <div class="color-orange"> <% review.grades.times { concat "&#9733;".html_safe} %> </div>
   <%= review.comments %>
-  <br>
   <br>
 
 <% end %>
