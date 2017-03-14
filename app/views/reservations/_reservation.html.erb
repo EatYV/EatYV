@@ -1,4 +1,17 @@
-<% if current_chef == @cuisine.chef or user_signed_in? %>
+<% if current_chef == @cuisine.chef %>
+  <% @reservations.each do |reservation| %>
+    <div class='reserv-box'>
+      <b><p><%= reservation.name %></p></b>
+      <p><%= reservation.time %></p>
+      <p><%= reservation.message %></p>
+      <p><%= reservation.user.email %></p>
+    </div>
+    <br>
+    <br>
+  <% end %>
+<% end %>
+
+<% unless current_user.blank? %>
   <% @reservations.each do |reservation| %>
     <% if current_user.id == reservation.user_id %>
     <div class='reserv-box'>
