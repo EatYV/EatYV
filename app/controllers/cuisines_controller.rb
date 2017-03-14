@@ -75,11 +75,6 @@ class CuisinesController < ApplicationController
   def cuisine_params
     params.require(:cuisine).permit(:title, :about, :availability, :location)
   end
-
-  def correct_user
-      @reservation = current_user.reservation.find_by(id: params[:id])
-      redirect_to cuisines_path, notice: "Not authorized" if @reservation.nil?
-  end
 end
 
 
