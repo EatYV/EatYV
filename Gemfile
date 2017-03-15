@@ -5,6 +5,7 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+gem 'activeadmin', git: 'https://github.com/activeadmin/activeadmin'
 gem 'country_select'
 gem 'carrierwave', '~> 1.0'
 gem "mini_magick"
