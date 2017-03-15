@@ -14,29 +14,38 @@
         <% end %>
 
         <div class="field">
-          <%= f.label :title %>
-          <%= f.text_field :title, class: 'form-control' %>
+          <!-- <%= f.label :title %> -->
+          <%= f.text_field :title, placeholder: 'Cuisine title', class: 'form-control' %>
         </div>
 
-        <div class="field">
-          <%= f.label :about %>
-          <%= f.text_area :about, class: 'form-control', size: '30x8' %>
-        </div>
-
-        <div class="field">
-          <%= f.label :availability %>
-          <%= f.text_field :availability, class: 'form-control' %>
-        </div>
         <br>
 
         <div class="field">
-          <%= f.label :location, class: 'mr-sm-2' %>
-          <%= f.country_select :location %>
+          <!-- <%= f.label :about %> -->
+          <%= f.text_area :about, placeholder: 'Tell us about you and your cuisine', class: 'form-control', size: '30x8' %>
+        </div>
+
+        <br>
+
+        <div class="field">
+          <!-- <%= f.label :availability %> -->
+          <%= f.text_field :availability, placeholder: :availability, class: 'form-control' %>
+        </div>
+
+        <br>
+
+        <div class="field">
+          <!-- <%= f.label :location %> -->
+          <%= f.country_select :location, include_blank: 'Select a country' %>
+          <br>
+          <br>
+          <%= f.text_field :address, placeholder: :address, class: 'form-control' %>
         </div>
         <br>
         <div class="actions">
           <%= f.submit class: 'btn btn-warning' %>
         </div>
+        <br>
       <% end %>
     <% end %>
   </div>
