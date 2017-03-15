@@ -21,3 +21,140 @@
 h1{
 	font-family: 'Dancing Script', cursive;
 }
+
+footer {
+  background:#191919;
+  color:#fff;
+  margin:0;
+  /*@import 'https://fonts.googleapis.com/css?family=Open+Sans';
+  font-family: 'Open Sans', sans-serif;*/
+  font-family: 'Dancing Script', cursive;
+ 
+  .centered {
+    max-width:1200px;
+    margin:0 auto;
+    display:flex;
+    justify-content:space-between;
+   
+    .footer-logo {
+      width:20%;
+      
+      img.logo {
+        padding:30px 20px 10px 20px;
+        max-width:100%;
+      }
+    }
+    
+    .footer-contact {
+      width:20%;
+    }
+    
+  }
+}
+
+@media only screen and (max-width: 749px) {
+  footer {
+    .centered {
+      flex-wrap:wrap;
+      .footer-logo {
+        max-width:250px;
+        width:50%
+      }
+      .footer-contact {
+        width:50%;
+        padding:0 20px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  footer {
+    .centered {
+      .footer-logo {
+        width:100%;
+        margin:0 auto;
+      }
+      
+      .footer-contact {
+        width:100%;
+      }
+        }
+      }
+    }
+
+/* Social Icons */
+.social {
+  text-align:center;
+  a {
+    display:inline-block;
+    padding:7px;
+    width:35px;
+    height:35px;
+    margin:0 2px;
+    background:#fff;
+    border-radius:50%;
+    vertical-align:middle;
+    &:hover {
+      background:#65c2ed;
+    }
+    &.linkedin {
+      padding:4px;
+    }
+    svg {
+      .face, .twit, .link {
+        fill: #000;
+      }
+    }
+  }
+}
+
+/* Typography */
+footer {
+  h3 {
+    font-weight:lighter;
+    font-style:italic;
+    margin-bottom:0;
+  }
+
+  p, li {
+    font-weight:400;
+    text-transform:uppercase;
+    letter-spacing:0.05em;
+    margin:10px 0;
+  }
+
+  a { 
+    color:#fff;
+    text-decoration:none;
+    -webkit-transition: color .5s, background .5s;
+    transition: color .5s, background .5s;
+    &:hover {
+      color:#65c2ed;
+    }
+  }
+}
+
+/* Misc CSS */
+.clearfix {
+  &:before,
+  &:after {
+      content: '\0020';
+      display: block;
+      overflow: hidden;
+      visibility: hidden;
+      width: 0;
+      height: 0;
+      clear: both;
+  }
+}
+
+/*body {
+  margin:0;
+}
+
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}*/
