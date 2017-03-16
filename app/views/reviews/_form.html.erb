@@ -3,7 +3,7 @@
   <%= form_for([@cuisine, @cuisine.reviews.build]) do |f| %>
 
     <div class="field">
-      <%= f.text_area :comments, step: :any, placeholder: :comments, class: 'form-control text_area' %>
+      <%= f.text_area :comments, class: 'form-control text_area', step: :any, placeholder: :comments %>
     </div>
 <br>
     <div class="field">
