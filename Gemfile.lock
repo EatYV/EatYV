@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/activeadmin/activeadmin
-  revision: fd0612d9a72d106b5d7855db3751ed8f9ccf0a81
+  revision: 6411350c8abf8dd8229dfe3e6e3f898a8992fd16
   specs:
     activeadmin (1.0.0.pre5)
       arbre (~> 1.0, >= 1.0.2)
@@ -92,7 +92,7 @@ GEM
       countries (~> 2.0)
       sort_alphabetical (~> 1.0)
     debug_inspector (0.0.2)
-    devise (4.2.0)
+    devise (4.2.1)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
       railties (>= 4.1.0, < 5.1)
