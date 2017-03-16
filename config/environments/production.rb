@@ -21,7 +21,7 @@ Rails.application.configure do
   # Do not fallback to assets pipeline if a precompiled asset is missed.
   config.assets.compile = true
   config.i18n.fallbacks = true
-  config.serve_static_assets = false
+  config.serve_static_assets = true
   config.action_mailer.raise_delivery_errors = false
   config.active_support.deprecation = :log
   config.active_record.migration_error = :page_load
