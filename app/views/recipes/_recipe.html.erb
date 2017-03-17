@@ -6,7 +6,7 @@
   <br>
   <% if current_chef == @cuisine.chef %>
      <%= link_to "Edit Recipe", edit_cuisine_recipe_path(recipe.cuisine, recipe) %> |
-    <%= link_to "Delete Recipe", [recipe.cuisine, recipe], method: :delete  %>
+    <%= link_to "Delete Recipe", [recipe.cuisine, recipe], method: :destroy  %>
     <br>
     <br>
   <% end %>

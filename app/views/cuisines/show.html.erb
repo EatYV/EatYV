@@ -8,7 +8,7 @@
     <%= @cuisine.address %><br>
     <li><% if current_chef == @cuisine.chef %>
     <%= link_to 'Edit', edit_cuisine_path(@cuisine) %> |
-    <%= link_to 'Delete', @cuisine, method: :delete, data: { confirm: 'Are you sure?' } %>
+    <%= link_to 'Delete', @cuisine, method: :destroy, data: { confirm: 'Are you sure?' } %>
     <% end %></li>
   </div>
 </div>
