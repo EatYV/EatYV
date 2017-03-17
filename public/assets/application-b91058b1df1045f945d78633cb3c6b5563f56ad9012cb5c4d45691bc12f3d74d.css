@@ -11145,11 +11145,6 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
 }
 
 /* line 43, /home/s/apps/EatYV/app/assets/stylesheets/home.scss */
-.dancing-script {
-  font-family: 'Dancing Script', cursive;
-}
-
-/* line 47, /home/s/apps/EatYV/app/assets/stylesheets/home.scss */
 .search-round-bar {
   /* Firefox */
   /* Safari, Chrome */
@@ -11220,11 +11215,6 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
   color: #d3d3d3;
 }
 
-/* line 55, /home/s/apps/EatYV/app/assets/stylesheets/cuisines.scss */
-.dancing-script {
-  font-family: 'Dancing Script', cursive;
-}
-
 /* line 5, /home/s/apps/EatYV/app/assets/stylesheets/reservations.scss */
 .reserv-box {
   border-style: solid;
@@ -11239,9 +11229,4 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
 /* line 5, /home/s/apps/EatYV/app/assets/stylesheets/reviews.scss */
 .color-orange {
   color: #f0ad4e;
-}
-
-/* line 22, /home/s/apps/EatYV/app/assets/stylesheets/application.scss */
-h1 {
-  font-family: 'Dancing Script', cursive;
 }
