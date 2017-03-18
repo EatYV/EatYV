@@ -6,6 +6,8 @@ class Chef < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
+  validates :phone, presence: true
+
   def login=(login)
     @login = login
   end
