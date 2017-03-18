@@ -6,7 +6,7 @@
     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
       <div class="field">
         <!-- <%= f.label :email %><br /> -->
-        <%= f.text_field :login, autofocus: true, placeholder: :login %>
+        <%= f.text_field :login, autofocus: true, placeholder: 'Email or Phone' %>
       </div>
 
       <div class="field">
