@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170319095409) do
+ActiveRecord::Schema.define(version: 20170321135455) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -77,6 +77,18 @@ ActiveRecord::Schema.define(version: 20170319095409) do
     t.index ["chef_id"], name: "index_cuisines_on_chef_id", using: :btree
   end
 
+  create_table "orders", force: :cascade do |t|
+    t.string   "recipe_title"
+    t.integer  "user_id"
+    t.integer  "reservation_id"
+    t.integer  "recipe_id"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+    t.index ["recipe_id"], name: "index_orders_on_recipe_id", using: :btree
+    t.index ["reservation_id"], name: "index_orders_on_reservation_id", using: :btree
+    t.index ["user_id"], name: "index_orders_on_user_id", using: :btree
+  end
+
   create_table "recipes", force: :cascade do |t|
     t.string   "title"
     t.decimal  "price"
@@ -134,6 +146,9 @@ ActiveRecord::Schema.define(version: 20170319095409) do
   end
 
   add_foreign_key "cuisines", "chefs"
+  add_foreign_key "orders", "recipes"
+  add_foreign_key "orders", "reservations"
+  add_foreign_key "orders", "users"
   add_foreign_key "recipes", "chefs"
   add_foreign_key "recipes", "cuisines"
   add_foreign_key "reservations", "cuisines"
