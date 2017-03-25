@@ -39,6 +39,12 @@
           <%= f.country_select :location, include_blank: 'Select a country' %>
           <br>
           <br>
+          <%= f.text_field :city, placeholder: :city, class: 'form-control' %>
+        </div>
+        <br>
+
+         <div class="field">
+          <!-- <%= f.label :address %> -->
           <%= f.text_field :address, placeholder: :address, class: 'form-control' %>
         </div>
         <br>
