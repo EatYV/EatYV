@@ -3,7 +3,7 @@ class CuisinesController < ApplicationController
 
   def index
     #@cuisines = Cuisine.where(["title LIKE ?","%#{params[:search]}%"])
-    @cuisines = Cuisine.where('lower(address) LIKE lower(?) OR lower(address) LIKE lower(?)', "%#{params[:search]}%", "%#{params[:search]}%")
+    @cuisines = Cuisine.where('lower(city) LIKE lower(?) OR lower(city) LIKE lower(?)', "%#{params[:search]}%", "%#{params[:search]}%")
   end
   # GET /cuisines
   # GET /cuisines.json
