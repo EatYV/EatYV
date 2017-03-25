@@ -14,6 +14,7 @@ class CuisinesController < ApplicationController
     @recipes = Recipe.where(cuisine_id: @cuisine).order('created_at DESC')
     @reservations = Reservation.where(cuisine_id: @cuisine).order('created_at DESC')
     @reviews = Review.where(cuisine_id: @cuisine).order('created_at DESC')
+    @recipe_orders = @cuisine.recipes.pluck(:title, :price).map { |reservation_order| reservation_order.join(" ") }
   end
 
   # GET /cuisines/new

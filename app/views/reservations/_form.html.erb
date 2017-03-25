@@ -7,10 +7,15 @@
     </div>
     <br>
     <div class="field">
+      <!-- <%= f.label :title %> -->
+      <%= select_tag 'title', options_from_collection_for_select(@recipes, :title, :title), {multiple: true, :style => "width:450px;" }  %>
+    </div>
+    <br>
+    <div class="field">
       <!-- <%= f.label :time %> -->
       <%= f.text_field :time, placeholder: :time, class: 'form-control'  %>
     </div>
-  <br>
+    <br>
     <div class="field">
       <!-- <%= f.label :message %> -->
       <%= f.text_area :message, placeholder: :message, class: 'form-control', size: '30x6' %>
