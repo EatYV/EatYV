@@ -95,9 +95,9 @@ ActiveRecord::Schema.define(version: 20170325153345) do
     t.text     "message"
     t.integer  "cuisine_id"
     t.integer  "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string   "title"
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
+    t.text     "title",      default: [],              array: true
     t.decimal  "price"
     t.index ["cuisine_id"], name: "index_reservations_on_cuisine_id", using: :btree
     t.index ["user_id"], name: "index_reservations_on_user_id", using: :btree

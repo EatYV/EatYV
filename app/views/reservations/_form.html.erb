@@ -7,8 +7,7 @@
     </div>
     <br>
     <div class="field">
-      <!-- <%= f.label :title %> -->
-      <%= select_tag 'title', options_from_collection_for_select(@recipes, :title, :title), {multiple: true, :style => "width:450px;" }  %>
+      <%= f.select :title, @recipe_orders, {}, {multiple: true, :style => "width:450px;" }  %>
     </div>
     <br>
     <div class="field">
