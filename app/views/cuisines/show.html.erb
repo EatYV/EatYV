@@ -14,17 +14,18 @@
 </div>
 
 
-<br><br>
-
+<br>
+<br>
 
 <h1>Menu</h1>
-  <%= render 'recipes/recipe' %>
-    <br><br>
+<%= render 'recipes/recipe' %>
+<br>
+<br>
 
-    <% if user_signed_in? or current_chef == @cuisine.chef %>
-      <h2>Reservations:</h2>
-      <%= render 'reservations/reservation' %>
-    <% end %>
+<% if user_signed_in? or current_chef == @cuisine.chef %>
+  <h2>Reservations:</h2>
+  <%= render 'reservations/reservation' %>
+<% end %>
 
 <br>
 
