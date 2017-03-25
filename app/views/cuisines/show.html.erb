@@ -5,6 +5,7 @@
     About: <%= @cuisine.about %><br>
     Availability: <%= @cuisine.availability %><br>
     Location: <%= @cuisine.location %>,
+    <%= @cuisine.city %>,
     <%= @cuisine.address %><br>
     <li><% if current_chef == @cuisine.chef %>
       <%= link_to 'Edit', edit_cuisine_path(@cuisine) %> |
