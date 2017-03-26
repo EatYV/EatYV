@@ -2,22 +2,18 @@
   <div class="cuisine_background">
     <div class="cuisine_background-content">
       <h1>Cuisines</h1>
-      <table>
-        <thead>
-          <tr>
-            <th colspan="3"></th>
-          </tr>
-        </thead>
-
-        <tbody>
-          <% @cuisines.each do |cuisine| %>
-            <tr>
-              <td><%= link_to cuisine.title, cuisine, class: 'btn btn-secondary' %></td>
-            </tr>
-          <% end %>
-        </tbody>
-      </table>
-
+      <div class="box">
+        <% @cuisines.each do |cuisine| %>
+          <div class="btn btn-secondary">
+            <%= link_to cuisine.title, cuisine %><br>
+            <%= link_to cuisine.about, cuisine %><br>
+            <%= link_to cuisine.availability, cuisine %><br>
+            <%= link_to cuisine.location, cuisine %><br>
+            <%= link_to cuisine.city, cuisine %><br> 
+            <%= link_to cuisine.address, cuisine %><br> 
+          </div> 
+        <% end %>
+      </div>
       <br>
       <% if chef_signed_in? %>
         <%= link_to 'New Cuisine', new_cuisine_path, class: 'btn btn-warning' %>
