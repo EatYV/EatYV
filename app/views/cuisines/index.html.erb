@@ -4,14 +4,16 @@
       <h1>Cuisines</h1>
       <div class="box">
         <% @cuisines.each do |cuisine| %>
-          <div class="btn btn-secondary">
-            <%= link_to cuisine.title, cuisine %><br>
-            <%= link_to cuisine.about, cuisine %><br>
-            <%= link_to cuisine.availability, cuisine %><br>
-            <%= link_to cuisine.location, cuisine %><br>
-            <%= link_to cuisine.city, cuisine %><br> 
-            <%= link_to cuisine.address, cuisine %><br> 
-          </div> 
+          <%= link_to cuisine do %>
+            <div class="btn btn-secondary">  
+              <%= cuisine.title %><br>
+              <%= cuisine.about %><br>
+              <%= cuisine.availability %><br>
+              <%= cuisine.location %><br>
+              <%= cuisine.city %><br> 
+              <%= cuisine.address %><br> 
+            </div> 
+          <% end %>
         <% end %>
       </div>
       <br>
