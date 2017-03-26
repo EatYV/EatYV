@@ -1,0 +1,14 @@
+LOG:  database system was shut down at 2017-03-19 01:53:20 EET
+LOG:  MultiXact member wraparound protections are now enabled
+LOG:  database system is ready to accept connections
+LOG:  autovacuum launcher started
+FATAL:  lock file "postmaster.pid" already exists
+HINT:  Is another postmaster (PID 11775) running in data directory "/usr/local/var/postgres"?
+LOG:  autovacuum launcher shutting down
+LOG:  received smart shutdown request
+LOG:  shutting down
+LOG:  database system is shut down
+LOG:  database system was shut down at 2017-03-25 01:13:27 EET
+LOG:  MultiXact member wraparound protections are now enabled
+LOG:  database system is ready to accept connections
+LOG:  autovacuum launcher started
