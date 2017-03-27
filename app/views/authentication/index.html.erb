@@ -1,11 +1,11 @@
 <div class="home_background">
   <div class="home_background-content">
     <% if !user_signed_in? and !chef_signed_in? %>
-      <%= link_to 'Become a Chef and Start to cook', new_chef_registration_path, class: ' btn btn-warning btn-block' %><br>
+      <%= link_to 'Become a Chef and Start cooking', new_chef_registration_path, class: ' btn btn-warning btn-block' %><br>
       <%= link_to 'Log In As a Chef', new_chef_session_path, class: 'btn btn-warning btn-block' %><br>
       <hr color="#f0ad4e">
       <br>
-      <%= link_to 'Become a User and Start to eat', new_user_registration_path, class: 'btn btn-warning btn-block' %><br>
+      <%= link_to 'Become a User and Start eating', new_user_registration_path, class: 'btn btn-warning btn-block' %><br>
       <%= link_to 'Log In As a User', new_user_session_path, class: 'btn btn-warning btn-block' %><br>
     <% end %>
   </div>
